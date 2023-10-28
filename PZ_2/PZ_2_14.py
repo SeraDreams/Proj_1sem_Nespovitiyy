@@ -8,9 +8,9 @@ def error():
 
 def main(number):
     #проверка вёл ли пользователь трёхзначное число
-    if len(number) == 3 and number.isdigit():
+    if len(number.replace('-', '')) == 3 and number.replace('-', '').isdigit():
         #вывод
-        print(f'Первая цифра вашего числа: {int(number)//100}')
+        print(f'Первая цифра вашего числа: {abs(int(number))//100}')
     else:
         error()
 
