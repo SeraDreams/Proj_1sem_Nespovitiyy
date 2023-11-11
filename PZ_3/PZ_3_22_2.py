@@ -3,15 +3,15 @@
 
 def main(number_1, number_2):
     try:
-        float(number_1)
-        float(number_2)
+        number_1 = float(number_1)
+        number_2 = float(number_2)
         if number_1 > number_2:
             print("Большее число:", number_1)
         elif number_2 > number_1:
             print("Большее число:", number_2)
         else:
             print("Числа равны")
-    except:
+    except ValueError:
         number_1 = input("ОШИБКА! Введите повторно первое число: ")
         number_2 = input("Введите повторно второе число: ")
         main(number_1, number_2)
